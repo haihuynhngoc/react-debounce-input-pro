@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
@@ -25,6 +26,7 @@
   "license": "MIT",
   "description": "A lightweight React component for debounced input handling, with full TypeScript support.",
   "dependencies": {
+    "@rollup/plugin-replace": "^5.0.7",
     "tslib": "^2.6.3"
   },
   "peerDependencies": {
