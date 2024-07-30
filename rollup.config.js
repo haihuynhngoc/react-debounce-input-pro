@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
+import del from 'rollup-plugin-delete';
 
 export default {
   input: 'src/index.ts',
@@ -9,15 +10,16 @@ export default {
     {
       file: 'dist/index.js',
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: false,
     },
     {
       file: 'dist/index.esm.js',
       format: 'esm',
-      sourcemap: true,
+      sourcemap: false,
     },
   ],
   plugins: [
+    del({ targets: 'dist/*' }),
     resolve(), // Resolve node_modules
     commonjs(), // Convert CommonJS modules to ES modules
     typescript({ tsconfig: './tsconfig.json' }), // Compile TypeScript
