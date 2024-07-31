@@ -41,7 +41,7 @@ or via yarn:
 
 ## Demo
 
-Check out the live demo on [CodeSandbox](https://57nsfv.csb.app/)
+Check out the live demo on [CodeSandbox](https://codesandbox.io/p/sandbox/react-debounce-input-pro-example-57nsfv)
 
 
 ## Usage
