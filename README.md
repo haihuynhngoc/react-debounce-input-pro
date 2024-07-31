@@ -18,10 +18,11 @@ A lightweight (~5KB) React component for debounced input handling, with full Typ
 ## Table of Contents
 
 - [Installation](#installation)
+- [Demo](#demo)
 - [Usage](#usage)
+- [API](#api)
 - [Credits](#credits)
 - [License](#license)
-- [Features](#features)
 - [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 
@@ -29,14 +30,19 @@ A lightweight (~5KB) React component for debounced input handling, with full Typ
 
 Follow these steps to install the DebounceInput component:
 
-1. Install the package via npm:
+Install the package via npm:
    ```bash
    npm install react-debounce-input-pro
    ```
-   or via yarn:
+or via yarn:
    ```bash
    yarn add react-debounce-input-pro
    ```
+
+## Demo
+
+Check out the live demo on [CodeSandbox](https://57nsfv.csb.app/)
+
 
 ## Usage
 
@@ -158,8 +164,8 @@ export default Example;
 | `minLength`    | `number`                                   | optional | The minimum length of the input to trigger debounce. |
 | `onChange`     | `(value: string) => void`                  | optional | Callback function called on every input change. |
 | `onDebounce`   | `(value: string) => void`                  | optional | Callback function called after the debounce delay. |
-| `notifyOnEnter`| `boolean`                                  | `true`      | Whether to update the value and trigger onDebounce immediately on Enter key press, skipping debounce. |
-| `notifyOnBlur` | `boolean`                                  | `true`      | Whether to update the value and trigger onDebounce immediately on input blur, skipping debounce. |
+| `notifyOnEnter`| `boolean`                                  | `true`      | Skipping debounce, invoke the value immediately on press Enter |
+| `notifyOnBlur` | `boolean`                                  | `true`      | Skipping debounce, invoke the value immediately on input blur |
 | `element`      | `React.ElementType`                        | `'input'`, `'textarea'`, `CustomInput`   | The HTML element or custom component to use. |
 | `elementProps` | `React.ComponentPropsWithoutRef<T>`        | optional | Additional props for the custom component. |
 
